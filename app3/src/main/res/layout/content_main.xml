@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:weightSum="4">
+
+    <!-- para fijar por porcentaje de tamaño los elementos de cada columna o fila uso weight
+        boton1 pesa 2, boton2 1 y boton3 1 provoca que boton 1 sea el doble de grande que 2 y 3
+        el rango de pesos puede ser el que se quiera, lo que importa es la proporción entre pesos
+        opcionalmente se puede añadir al LinearLayout la propiedad android:weightSum="4"  o otro valor
+        En este ejemplo 4 = 100%, 1 = 25% -->
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Este es boton 3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Boton 2" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Este es texto del botón1" />
+</LinearLayout>
