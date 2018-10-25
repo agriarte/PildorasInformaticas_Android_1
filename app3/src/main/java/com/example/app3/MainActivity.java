@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Ejercicio LinearLayout Horizontal con propiedad weight, no hay código
+
 
 
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

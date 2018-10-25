@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stones</string>
+    <string name="rocasTitulo">Stones</string>
+    <string name="btn1Jugar">Play</string>
+    <string name="btn2Config">Configuration</string>
+    <string name="btn3Salir">Quit</string>
+    <string name="btn4Info">Info</string>
+
+</resources>
