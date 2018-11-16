@@ -1,1 +1,1 @@
-include ':app', ':app2', ':app3', ':app4', ':app5', ':ap6', ':app7'
+include ':app01_basico_settext', ':app02_contador_botones', ':app03_weight_xml', ':app04_ejemplo_constraintlayout', ':app05_juego_rocas', ':app06_basico_setimage', ':app07_basico_xml_java', ':app08_ejercicio_sumas', ':app09_actionbar', ':app10_toolbar'

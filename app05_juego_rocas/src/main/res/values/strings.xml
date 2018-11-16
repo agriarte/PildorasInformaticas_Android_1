@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rocas</string>
+    <string name="rocasTitulo">Rocas</string>
+    <string name="btn1Jugar">Jugar</string>
+    <string name="btn2Config">Configuración</string>
+    <string name="btn3Salir">Salir</string>
+    <string name="btn4Info">Info</string>
+    <string name="txtInfo">Información</string>
+    <string name="txt2Info">Esta es la pantalla de información del juego Rocas. Es un ejercicio del tutorial Pildoras Informáticas</string>
+</resources>

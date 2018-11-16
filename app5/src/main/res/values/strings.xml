@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Rocas</string>
-    <string name="rocasTitulo">Rocas</string>
-    <string name="btn1Jugar">Jugar</string>
-    <string name="btn2Config">Configuración</string>
-    <string name="btn3Salir">Salir</string>
-    <string name="btn4Info">Info</string>
-</resources>

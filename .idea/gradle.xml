@@ -8,13 +8,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/ap6" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/app2" />
-            <option value="$PROJECT_DIR$/app3" />
-            <option value="$PROJECT_DIR$/app4" />
-            <option value="$PROJECT_DIR$/app5" />
-            <option value="$PROJECT_DIR$/app7" />
+            <option value="$PROJECT_DIR$/app01_basico_settext" />
+            <option value="$PROJECT_DIR$/app02_contador_botones" />
+            <option value="$PROJECT_DIR$/app03_weight_xml" />
+            <option value="$PROJECT_DIR$/app04_ejemplo_constraintlayout" />
+            <option value="$PROJECT_DIR$/app05_juego_rocas" />
+            <option value="$PROJECT_DIR$/app06_basico_setimage" />
+            <option value="$PROJECT_DIR$/app07_basico_xml_java" />
+            <option value="$PROJECT_DIR$/app08_ejercicio_sumas" />
+            <option value="$PROJECT_DIR$/app09_actionbar" />
+            <option value="$PROJECT_DIR$/app10_toolbar" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
