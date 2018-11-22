@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,44 +8,63 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="0dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rocasTitulo"
-        android:textAppearance="@android:style/TextAppearance.Large" />
-
-    <Button
-        android:id="@+id/button"
+    <include
+        android:id="@+id/id_mi_tool_bar"
+        layout="@layout/mi_tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn1Jugar"
-        android:textAllCaps="false" />
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="Ejecutar_Config"
-        android:text="@string/btn2Config"
-        android:textAllCaps="false" />
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="Ejecutar_Salir"
-        android:text="@string/btn3Salir"
-        android:textAllCaps="false" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rocasTitulo"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="Ejecutar_Info"
-        android:text="@string/btn4Info"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn1Jugar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Ejecutar_Config"
+            android:text="@string/btn2Config"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Ejecutar_Salir"
+            android:text="@string/btn3Salir"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Ejecutar_Info"
+            android:text="@string/btn4Info"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
 </LinearLayout>

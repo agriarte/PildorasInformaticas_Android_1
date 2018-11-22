@@ -3,16 +3,30 @@ package com.example.app5;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    private Toolbar miToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Pasos a seguir para ToolBar:
+        //1-crear layout xml con el toolbar
+        //2-incluirlo en el layout de la actividad correspondiente
+        //3-registrar el nuevo toolbar en MainActivity.java
+        //4-activar el toolbar como barra de accciones en MainActivity.java
+        //5- en styles.xml escoger un tema que no tenga actionbar o añadir:
+        //<item name="windowActionBar">false</item> para deshabilitarlo. Sin esto el programa cae
+        //6- el toolbar contiene los items xml de la carpeta menu
+        miToolbar = (Toolbar)findViewById(R.id.id_mi_tool_bar);
+        setSupportActionBar(miToolbar);//registramos la toolbar y ya podemos manejarla como un menu
+
     }
 
   public void Ejecutar_Info (View view){
@@ -32,32 +46,8 @@ public class MainActivity extends AppCompatActivity {
         finish();
    }
 
-    /**
-     * Initialize the contents of the Activity's standard options menu.  You
-     * should place your menu items in to <var>menu</var>.
-     *
-     * <p>This is only called once, the first time the options menu is
-     * displayed.  To update the menu every time it is displayed, see
-     * {@link #onPrepareOptionsMenu}.
-     *
-     * <p>The default implementation populates the menu with standard system
-     * menu items.  These are placed in the {@link Menu#CATEGORY_SYSTEM} group so that
-     * they will be correctly ordered with application-defined menu items.
-     * Deriving classes should always call through to the base implementation.
-     *
-     * <p>You can safely hold on to <var>menu</var> (and any items created
-     * from it), making modifications to it as desired, until the next
-     * time onCreateOptionsMenu() is called.
-     *
-     * <p>When you add items to the menu, you can implement the Activity's
-     * {@link #onOptionsItemSelected} method to handle them there.
-     *
-     * @param menu The options menu in which you place your items.
-     * @return You must return true for the menu to be displayed;
-     * if you return false it will not be shown.
-     * @see #onPrepareOptionsMenu
-     * @see #onOptionsItemSelected
-     */
+
+    //infla la toolbar con el menu xml
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_mainactivity,menu);
@@ -65,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-
+    //lectura items de toolbar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();

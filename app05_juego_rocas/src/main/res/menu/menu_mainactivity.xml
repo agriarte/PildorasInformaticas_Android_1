@@ -7,15 +7,15 @@
         android:id="@+id/idMenuConfig"
         android:icon="@android:drawable/ic_menu_preferences"
         android:title="Configuración"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/idMenuInfo"
         android:icon="@android:drawable/ic_menu_info_details"
         android:title="Información"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/idMenuBuscar"
         android:icon="@android:drawable/ic_menu_search"
         android:title="Buscar"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 </menu>

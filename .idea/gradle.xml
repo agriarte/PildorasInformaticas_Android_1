@@ -18,6 +18,9 @@
             <option value="$PROJECT_DIR$/app08_ejercicio_sumas" />
             <option value="$PROJECT_DIR$/app09_actionbar" />
             <option value="$PROJECT_DIR$/app10_toolbar" />
+            <option value="$PROJECT_DIR$/app11_vistas_graficos" />
+            <option value="$PROJECT_DIR$/app12_vistas_graficos_path" />
+            <option value="$PROJECT_DIR$/app13_tres_en_raya" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
