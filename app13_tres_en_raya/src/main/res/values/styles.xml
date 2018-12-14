@@ -2,6 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.NoActionBar.Fullscreen"></style>
+
     <style name="titulo">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -15,6 +16,7 @@
         <item name="android:minHeight">@dimen/alto_minimo_boton</item>
         <item name="android:layout_margin">@dimen/margen_boton</item>
         <item name="android:textSize">@dimen/texto_boton</item>
+        <item name="android:background">@drawable/boton</item>
         <item name="android:onClick">aJugar</item>
     </style>
     
@@ -25,10 +27,17 @@
         <item name="android:alpha">0.8</item>
     </style>
 
+    <style name="radioboton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/texto_radio</item>
+    </style>
+
     <style name="casilla">
         <item name="android:layout_width">@dimen/casilla</item>
         <item name="android:layout_height">@dimen/casilla</item>
         <item name="android:src">@drawable/casilla</item>
+        <item name="android:layout_margin">2dp</item>
         <item name="android:onClick">toque</item>
     </style>
 
