@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // iniciamos el array casillas que almacena el estado de casilla
+        // iniciamos el array CASILLAS[] que almacena el id del grafico contenido en cada casilla
         CASILLAS = new int[9];
 
         CASILLAS[0] = R.id.a1;
@@ -95,20 +95,53 @@ public class MainActivity extends Activity {
         toast.show();
 
         //jugador 1 marca casilla
+        //1-comprobar casilla está libre
         if (partida.comprobarCasilla(casilla)==false){
             return;
         }
-        marca(casilla);
-        partida.turno();//cambio de turno
 
-        //jugador 2 marca casilla
-        casilla = partida.ia();
-        //si casilla ocupada, bucle hasta encontrar otra libre
-        while (partida.comprobarCasilla(casilla)!=true){
-            casilla = partida.ia();
+
+        marca(casilla);//2-como está libre la marca
+
+        int resultado = partida.turno();//3-cambio de turno
+        if (resultado>0) {// si no hay empate
+            termina(resultado);
+            return; // este return es para que cuando el flujo vaya a termina y vuelva a este método
+                    // salga sin continuar código.
         }
-        marca(casilla);
-        partida.turno();//cambio de turno
+
+        if(jugadores==1) { // para un jugador usar IA
+            //ahora jugador 2 marca casilla
+            casilla = partida.ia();
+            //si casilla ocupada, bucle hasta encontrar otra libre
+            while (partida.comprobarCasilla(casilla) != true) {
+                casilla = partida.ia();
+            }
+            marca(casilla);// tras buscar casilla libre la marca
+            resultado = partida.turno();//cambio de turno
+            if (resultado > 0) {// si no hay empate
+                termina(resultado);
+            }
+        }//fin del if
+    }
+
+    private void termina(int resultado){
+        String mensaje;
+
+        if (resultado==1) mensaje = getResources().getString(R.string.circulos_ganan);
+        else if (resultado==2) mensaje = getResources().getString(R.string.aspas_ganan);
+        else mensaje = getResources().getString(R.string.empate);
+
+        Toast toast = Toast.makeText(this,mensaje, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER,0,0);
+        toast.show();
+
+        //partida null permitirá empezar nueva partida
+        partida=null;
+        //habilitar botones para que sean pulsados al empezar la partida
+        ((Button)findViewById(R.id.un_jugador)).setEnabled(true);
+        ((Button)findViewById(R.id.dos_jugadores)).setEnabled(true);
+        ((RadioGroup)findViewById(R.id.configDifi)).setAlpha(1);
 
     }
 
